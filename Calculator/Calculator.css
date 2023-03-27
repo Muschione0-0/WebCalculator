@@ -26,7 +26,6 @@ button:active { /* pressing button */
 /* -- Riquadro calcolatrice -- */
 div.calcBorder {
     display: inline-block;
-    float: left;
     border: 0.1em solid black;
     border-radius: 0.4em;
 }
@@ -158,8 +157,8 @@ footer {
     font-size: small;
     text-align: center;
     color: rgb(0, 0, 0);
-    padding-top: 2em;
-    
+    margin-top: 2em;
+
     display: block;
     clear: left;
 }
