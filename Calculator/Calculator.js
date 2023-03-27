@@ -107,7 +107,7 @@ $(document).ready(function () {
 
       $("input").attr("value", line); // Apporta modifiche visibili, sulla calcoaltrice post switch
     } else {
-      alert("Fatal Error! Please,REBOOT the page");
+      alert("Fatal Error! Please, REBOOT the page");
     }
   })
 });
@@ -146,7 +146,7 @@ function calculate(ope, num1, num2) {
   switch (ope) {
     case '+':
       // parseInt serve per imporre l'ope di somma e non concatenazione di stringhe
-      return parseInt(num1) + parseInt(num2);
+      return parseFloat(num1) + parseFloat(num2);
       break;
 
     case '−':
@@ -158,6 +158,8 @@ function calculate(ope, num1, num2) {
       break;
 
     case '÷':
+      // a / 0 = 0
+      // 0 / a = Infinity
       return num1 / num2;
       break;
   }

@@ -150,3 +150,21 @@ button#equal:hover {background-color: #60a6ff} /* curson on the button */
     cursor: not-allowed;
     transform: translateY(0);
 }
+
+
+
+/* -- Footer -- */
+footer {
+    font-size: small;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 2em;
+    
+    display: block;
+    clear: left;
+}
+
+footer > p{
+    background-color: #8be97a;
+    padding: 0.5em;
+}
