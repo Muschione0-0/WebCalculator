@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="html/text" charset="UTF-8">
+  <meta name="name" content="Marco Ghi">
+  <meta name="description" content="Basic Calculator">
+
+  <title>Calculator</title>
+  <link rel="icon" href="../Images/Calculator.jpeg">
+
+  <link href="Calculator.css" type="text/css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script src="Calculator.js"></script>
+</head>
+
+<body>
+  <h1>Your best Calculator</h1>
+  <hr>
+
+  <div class="calcBorder">
+    <div class="result">
+      <input type="text" value="" disabled placeholder="0">
+    </div>
+
+    
+    <div class="inputCalc">
+
+      <div class="numbers">
+        <div>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+        </div>
+        <div>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+        </div>
+        <div>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </div>
+        <div>
+          <button id="openBracket">(</button>
+          <button>0</button>
+          <button id="closeBracket">)</button>
+        </div>
+      </div>
+
+      <div class="operators">
+        <div><button>&#247</button></div> <!-- ÷ -->
+        <div><button>&#215</button></div> <!-- x -->
+        <div><button>&#8722</button></div> <!-- - -->
+        <div><button>&#43</button></div> <!-- + -->
+      </div>
+      
+      <div class="go">
+        <button id="clear">C</button> <!-- C -->
+        
+        <button id="equal">=</button> <!-- = -->
+        
+        <button id="clearAll">AC</button> <!-- C -->
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+<footer></footer>
+
+</html>

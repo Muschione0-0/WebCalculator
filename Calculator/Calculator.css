@@ -1,0 +1,152 @@
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 150%;
+}
+
+
+
+button {
+    /* font-weight: bold; */
+    text-align: center;
+
+    padding: 1em 1.8em;
+    border: 0;
+    border-radius: 0.8em;
+
+    box-shadow: 0 0.4em #eefeff;
+}
+
+button:active { /* pressing button */
+    box-shadow: 0 0.1em #eefeff;
+    transform: translateY(0.2em); /* a pressione, traslazione verticale verso il basso dei <button> */
+}
+
+
+
+/* -- Riquadro calcolatrice -- */
+div.calcBorder {
+    display: inline-block;
+    float: left;
+    border: 0.1em solid black;
+    border-radius: 0.4em;
+}
+
+
+
+/* -- Barra scrittura operazioni e risultati -- */
+div.result {
+    background-color: black;
+}
+
+div.result > input {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+
+    height: 2em;
+    color: darkgray;
+
+    text-align: right;
+    margin: 0.2em 0.3em;
+    background-color: black;
+    border: 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+
+/* -- Box numeri & operatori -- */
+div.inputCalc {
+    margin: 0 0.8em;
+    text-align: center;
+}
+
+
+
+/* -- Operatori Matematici -- */
+div.operators {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+div.operators > div {
+    margin: 0.8em 0;
+}
+
+div.operators > div > button {
+    background-color: orange;
+}
+
+div.operators > div > button:hover {background-color: #ffa600}
+
+div.operators > div > button:hover {
+    background-color: #ffbc40
+}
+
+
+
+/* -- Tastierino numerico -- */
+div.numbers {
+    display: inline-block;
+}
+
+/* div on div.numbers. Una linea di numeri della calcolatrice */
+div.numbers > div {
+    margin: 0.8em 0;
+}
+
+div.numbers > div > button{
+    margin-right: 0.2em; /* margin right of all <button> */
+}
+
+/* Tutti i bottoni dei div in div.numbers si coloreranno al passare del mouse */
+div.numbers > div > button:hover {background-color: #c0f0ff} /* curson on the button */
+
+
+
+/* -- Operation Controller -- */
+div.go{
+    /* 
+    overflow e width, cosi' settati, servono per evitare 
+    che il div contenitore (di C e =) collassi su se stesso */
+    overflow: auto;
+    width: 100%; /* tot area 2 button (C e =) */
+    
+    padding-bottom: 0.4em; /* spazio per la traslazione div:active */
+}
+
+button#clearAll {
+    float: right;
+    background-color: #00ff04;
+    font-size: 0.5em;
+    padding: 1.2em 1.8em;
+}
+
+button#clearAll:hover {background-color: #6aff4cea} /* curson on the button */
+
+button#clear {
+    float: left;
+    background-color: #ff2c2c;
+}
+
+button#clear:hover {background-color: #ff5050ea} /* curson on the button */
+
+
+button#equal {
+    /* occupa, sul 100% del div che li contiene (C e =), la parte restante */
+    width: 55%;
+    background-color: #3b96ff;
+}
+
+button#equal:hover {background-color: #60a6ff} /* curson on the button */
+
+
+/* -- disabled buttons -- */
+#openBracket, #closeBracket{
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: translateY(0);
+}
